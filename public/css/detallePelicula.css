@@ -1,0 +1,309 @@
+*{
+    font-family: monaco;
+    box-sizing: border-box;
+}
+h2.nombre{
+font-size: 2rem;
+background-color: #68f2cc;
+color: white;
+width: 50%;
+margin: 0 auto;
+border-radius: 20px;
+border-style: double;
+border-color: black;
+text-align: center;
+top: 10%;
+}
+ul.info{
+  text-align: center;
+  list-style-type: none;
+  color: rgb(104,242,204);
+}
+li.titulo {
+  font-size: 1.5rem;
+}
+
+button.dropbtn {
+    background: rgb(104, 242, 204);
+    padding-top: 23px;
+    position: relative;
+    left: -8px;
+    bottom: -2px;
+}
+button.w3-button.w3-black {
+    position: relative;
+    bottom: -19px;
+    left: -23px;
+    background-color: rgb(104,242,204)!important;
+}
+
+.button_buscador {
+    width: 20%;
+    position: relative;
+    top: 2px;
+    left: 256px;
+    height: -1px;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+    background-color: gainsboro;
+}
+img.generos-imagenes{
+  align-items: center;
+  width: 30%;
+}
+h2.nombre{
+  margin-top: 3%;
+}
+
+li.titulo{
+  font-size: 250%;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+  color: white;
+}
+
+li.poster{
+}
+
+li.generos{
+
+}
+
+li.lenguaje{
+
+}
+li.sinopsis{
+  margin: 0 auto;
+  width: 50%;
+
+}
+
+.button-fav{
+      padding: 14px 20px;
+      margin: 8px 0
+      border: none;
+      cursor: pointer;
+      width: 14%;
+      margin: 0 auto;
+      border-radius: 20px;
+}
+
+a.button-fav:hover{
+  opacity: 0,5;
+}
+
+.button-favorito{
+  width: 57%;
+  border-radius: 50%;
+}
+a:active, a:hover{
+  outline: 0;
+  opacity: 0.5;
+}
+
+#trailer{
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  border: white;
+  border-style: solid;
+  margin-left: 26.3%;
+}
+
+a.boton_deHome {
+    position: relative;
+    bottom: 0px;
+    left: 37px;
+}
+
+.button_buscador {
+    width: 20%;
+    position: relative;
+    top: -36px;
+    left: 175px;
+    height: -1px;
+    padding-top: 0px;
+    padding-left: 12px;
+    padding-bottom: 6px;
+    background-color: gainsboro;
+
+}
+
+  button.subtitulo{
+    font-size: 14px;
+background-color: white;
+color: black;
+width: 30%;
+margin: 0 auto;
+border-radius: 20px;
+border-style: double;
+border-color: black;
+text-align: center;
+top: 10%;
+height: 6vh;
+margin-left: 35%;
+margin-bottom: 4%;
+margin-top: 10%;
+}
+
+
+section div.contenedor {
+  overflow: hidden;
+  display: none;
+}
+
+section div.subtitulo2{
+  overflow: hidden;
+  display: none;
+}
+
+.subtitulo2{
+  display: none;
+  font-size: 14px;
+    background-color: white;
+    color: black;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border-style: double;
+    border-color: black;
+    text-align: center;
+    top: 10%;
+    height: 6vh;
+    margin-left: 35%;
+    margin-bottom: 4%;
+    margin-top: 10%;
+}
+
+article.peliculas{
+  float: left;
+  width: 15%;
+  margin-right: 2%;
+  background-color: #61F3CC;
+  height: 410px;
+}
+
+article.peliculas:nth-child(6n){
+  margin-right: 0%;
+}
+
+img.estrenos-imagenes{
+  border-style: solid;
+  border-color: white;
+}
+
+li.generos a:hover{
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+
+}
+
+@media screen and (max-width: 600px) {
+  a.item{
+    position: relative;
+      bottom: 22px;
+      left: 205px;
+  }
+
+  article.peliculas {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    background-color: #61F3CC;
+    height: 345px;
+    margin-bottom: 10%;
+}
+article.peliculas:nth-child(3n){
+  margin-right: 0%;
+}
+
+button.subtitulo {
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    width: 33%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border-style: double;
+    border-color: black;
+    text-align: center;
+    top: 10%;
+    height: 8vh;
+    margin-left: 35%;
+    margin-bottom: 4%;
+    margin-top: 10%;
+    padding-top: 0px;
+}
+
+.button-fav{
+  width: 25%;
+}
+
+  .tmdb-logo{
+    display: none;
+  }
+
+  form.busqueda{
+    display: none;
+  }
+
+  h2.nombre{
+    border-color: #6df3cc;
+    background-color: black;
+  }
+
+
+    button.w3-button.w3-black {
+        position: relative;
+        bottom: 22px;
+        left: 184px;
+        background-color: rgb(104,242,204)!important;
+    }
+
+    .tmdb-logo{
+      display: none;
+    }
+
+    form.busqueda{
+      display: none;
+    }
+
+    a.boton_deHome {
+        position: relative;
+        bottom: 41px;
+        left: 565px;
+        z-index: 1;
+    }
+    button.w3-button.w3-black {
+        position: relative;
+        bottom: 22px;
+        left: 458px;
+        background-color: rgb(104,242,204)!important;
+    }
+    p.boton_log_out {
+        position: relative;
+        bottom: -12px;
+        right: -40px;
+    }
+    a.preferidas {
+        bottom: 76px;
+        right: -219px;
+    }
+
+    a.boton_deHome {
+        display: block!important;
+        position: relative;
+        bottom: 43px;
+        left: 308px;
+        z-index: 1;
+
+    }
+
+    button.dropbtn {
+        position: relative;
+        bottom: 42px;
+        left: 471px;
+}
