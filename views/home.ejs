@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrousel.css">
+
+  </head>
+  <body>
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    <div class="contenedorDeTodo">
+
+
+    <header id="header">
+      <nav>
+        <ul class="ul-logo">
+          <a href="index.html"><li class="li-logo"><img src="img/logo.png" alt=""></li></a>
+          <a href="https://www.themoviedb.org/"><li class="tmdb-logo"><img src="img/tmdb.png" alt=""></li></a>
+        </ul>
+        <ul class="ul-menu">
+            <li>
+              <div class="dropdown" >
+                  <button class="dropbtn">GENEROS
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+              </div>
+              <div class="dropdown-content" id="myDropdown">
+
+              </div>
+            </li>
+            <li class="li-menu"><a class="boton_deHome"href="index.html">HOME</a></li>
+            <li class="li-menu"><a class="boton_deHome2"href="index.html">HOME</a></li>
+            <li class="nombre"></li>
+            <li class="w3-container">
+              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black " id="login">LOG IN</button>
+              <button type="button" name="button" class="boton_logOut"> <p class="boton_log_out">LOG OUT</p></button>
+              <a href="favoritas.html" class="preferidas">Peliculas favoritas</a>
+              <div id="id01" class="w3-modal w3-animate-opacity">
+                <div class="w3-modal-content w3-card-4">
+                  <div class="wrapper">
+                    <form action="index.html" method="GET" class="formularioDeLogIn">
+                        <p class="title">Log in</p>
+                        <input type="text" name="nombre" placeholder="Name" autofocus/>
+                        <i class="fa fa-user"></i>
+                        <input type="email" name="email" placeholder="Email" />
+                        <i class="fa fa-key"></i>
+                        <div class="form-group">
+                        <label for="genero" class="col-form-label">Genero:</label>
+                        <input type="radio" name="sexo" value="M"> Masculino
+                        <input type="radio" name="sexo" value="F"> Femenino
+                        <input type="radio" name="sexo" value="O"> Otro
+                        </div>
+
+
+                        <button type="submit">
+                          INGRESAR
+                        </button>
+                        <button class="boton_cancelar" type="reset" onclick="document.getElementById('id01').style.display='none'">CANCELAR</button>
+                    </form>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li class="topnav">
+              <form action="buscador.html" method="get" class="busqueda">
+                <input type="text" placeholder="Search.." name="buscador" class="texto-busqueda">
+                <button type="submit" class="button_buscador"><i class="fa fa-search"></i></button>
+              </form>
+            </li>
+
+        </ul>
+
+      </nav>
+    </header>
+
+<div class="carouseles">
+  <section class="car">
+
+    <a href="estrenos.html" id="estrenos-carousel" class="titulo_carrousel"> Estrenos</a>
+    <ul class="slideshow-container estrenos">
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </ul>
+
+
+  </section>
+  <section class="car">
+
+    <a href="popular.html" id="estrenos-carousel" class="titulo_carrousel">Populares</a>
+    <ul class="slideshow-container populares">
+
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+    </ul>
+
+
+  </section>
+
+  <section class="car">
+
+    <a href="top100.html" id="estrenos-carousel" class="titulo_carrousel">Mejores Punteadas</a>
+    <ul class="slideshow-container mejorPuntuadas">
+
+
+        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+    </ul>
+
+
+  </section>
+  <section class="car">
+
+    <a href="prox.html" id="estrenos-carousel" class="titulo_carrousel">Proximas</a>
+    <ul class="slideshow-container proximasPeliculas">
+
+
+        <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+    </ul>
+
+
+  </section>
+
+</div>
+
+
+
+    <footer>
+<div class="padre-footer">
+
+  <div class="copyright">
+      <h2 class="nombresDelFooter">Tommy Cohen</h2>
+
+  </div>
+  <div class="copyright">
+    <h2 class="nombresDelFooter">Victoria Duque</h2>
+  </div>
+  <div class="copyright">
+    <h2 class="nombresDelFooter">Delfina Orlansky</h2>
+  </div>
+</div>
+
+    </footer>
+    </div>
+  </body>
+
+</html>
+<script type="text/javascript" src="js/index.js">
+
+</script>
+<script type="text/javascript" src="js/general.js">
+
+</script>
