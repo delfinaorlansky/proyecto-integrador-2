@@ -7,7 +7,7 @@ home: (req, res) => {
     res.render('home')
 
 },
-detalle: (req, res) => {
+detallePelicula: (req, res) => {
     res.render('detallePelicula')
 }
 

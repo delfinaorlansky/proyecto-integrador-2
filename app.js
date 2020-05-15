@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/peliculas', peliculasRouter);
 app.use('/home', homeRouter);
-app.use('/detalle', detalleRouter);
+app.use('/detallePelicula', detalleRouter);
 
 
 // catch 404 and forward to error handler
