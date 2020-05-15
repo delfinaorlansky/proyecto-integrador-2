@@ -6,6 +6,9 @@ index: (req, res) => {
 home: (req, res) => {
     res.render('home')
 
+},
+detalle: (req, res) => {
+    res.render('detallePelicula')
 }
 
 }
