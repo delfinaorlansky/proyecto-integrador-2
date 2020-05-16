@@ -81,4 +81,121 @@ INSERT INTO reseñas (id_pelicula , id_usuario , texto_de_reseña , fecha_de_cre
 fecha_de_actualizacion , puntaje_sobre_pelicula) VALUES (443791, 4, "Underwater es una propuesta que no encaja demasiado en el Hollywood actual, ya que es una película con espíritu de serie de b de terror pero contando para ello con un presupuesto de serie a -entre 50 y 80 millones según la fuente consultada-. El resultado es una estimable pesadilla 
 submarina que da lo mejor de sí misma en su notable tramo final. ", 20200110 , 20200425 , 86 );
 
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (570670, 1, "El Hombre Invisible 
+es una película sobre la violencia machista, 
+sobre el maltrato, sobre el silencio
+y sobre la importancia de creer a las víctimas. 
+Leigh Whannell es un cineasta extraordinario. 
+En solo tres películas como director ha demostrado 
+que está bastante por encima de la media.", 20200228,20200420, 100);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (539537, 2, "El enigmático 
+Sr. Roarke hace realidad los sueños de los afortunados huéspedes 
+que acuden a su lujoso y remoto resort tropical en Fantasy Island.
+Pero, sus fantasías se convertirán en pesadillas y los invitados deberán 
+resolver el misterio que oculta la isla para poder escapar con vida.",
+20200227,20200422, 98);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (157336, 3, "La película 
+se desarrolla en un futuro no especificado. El mundo está 
+sobrepoblado, y una plaga está destruyendo las cosechas de 
+miles de granjas y creando enormes tormentas de arena. 
+Además, el nivel de nitrógeno en la atmósfera está subiendo, 
+por lo que la humanidad tiene sus días contados.",
+20140711,20191022, 95);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (512200, 4, "Jumanji: el siguiente nivel comienza 
+mostrando que los cuatro estudiantes no siguieron juntos,
+ como lo prometieron, cada uno tomó su propio camino, manteniéndose fiel a su personalidad real. 
+Sin embargo, esta distancia lastimó a Spencer y lo motivó a querer
+regresar al juego para recuperar a los amigos y la seguridad 
+que había ganado en el pasado.",
+20191213,20200122, 100);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (619264, 5, "El egoísmo que deja a 
+la gente morir de hambre. Es en los momentos de pánico y 
+desesperación cuando la envidia y la codicia salen a la luz 
+y la nueva película El Hoyo en Netflix no podría haber llegado 
+a nosotros en un mejor momento.",
+20191108,20191112, 80);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (514847, 1, "La película nos 
+sitúa en una pequeña comunidad de Dinamarca, que aparentemente 
+está muy unida. El problema surge cuando una noticia rompe 
+la tranquilidad del pueblo y la gente actúa de forma 
+totalmente hostil con nuestro protagonista.",
+20200313,20200501, 90);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (698320, 2, "En esta nueva 
+aventura, el erizo azul deberá viajar hasta nuestro mundo para 
+poder salvar el suyo. En su misión no estará solo, pues contará 
+con la ayuda de su amigo humano Tom Wachowski (James Marsden), 
+con quien intentará escapar del gobierno que quiere capturarlo, 
+además de huir de las artimañas del villano Doctor Ivo Robonik (Jim Carrey).",
+20200515,20200512, 95);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (420818, 3, "Es la historia 
+de Simba, un pequeño león quien debe aprender de su padre Mufasa
+todo lo que debe acerca de cómo ser un buen rey, el problema 
+está en que Simba tendrá que lidiar con las envidias familiares, 
+que llevan al hermano de su padre, Scar a confabular un terrible 
+plan para matar a Mufasa y a Simba, pero este cachorro escapa para 
+comenzar una aventura con nuevos amigos, pero al final recordará 
+quien es para recuperar su trono y salvar a toda su manada.",
+20190719,20200301, 100);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (210577, 4, "El día de su quinto 
+aniversario de boda, Nick Dunne (Ben Affleck) informa que su esposa 
+Amy (Rosamund Pike) ha desaparecido misteriosamente. 
+Pero pronto la presión policial y mediática hace que el 
+retrato de felicidad doméstica que ofrece Nick empiece a 
+tambalearse. Además, su extraña conducta lo convierte en 
+sospechoso, y todo el mundo comienza a preguntase si Nick 
+mató a su esposa.",
+20141003,20180102, 60);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (244786, 5, "Whiplash trata sobre 
+Andrew Neyman (Miles Teller), un baterista que asiste a la Academia Shaffer de Manhattan, 
+considerada como una de las principales escuelas de música del país. Su deseo es convertirse 
+en uno de los mejores bateristas de jazz de la historia, por lo que ve como una oportunidad única 
+cuando Terence Fletcher (J.K. Simmons), un talentoso y reconocido maestro, lo invita a formar parte
+del ensamble de jazz que él mismo dirige.", 
+20141010,20202130, 75);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (155, 1, "Con la ayuda del 
+teniente Jim Gordon (Gary Oldman) y el nuevo y comprometido fiscal del distrito Harvey Dent, 
+Batman se propone destruir para siempre el crimen organizado en la ciudad de Gotham.", 
+20080718,20200501, 85);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (293660, 2, "Deadpool es un personaje 
+que surge como la mayoría de los héroes, una vida complicada o un acontecimiento que lo marca notablemente, 
+se encuentra con alguien que le propone cambiar todo eso e incluso mejorarlo para ser un “súper”, pero oh sorpresa, 
+todo era mentira y ahora tiene que luchar contra esos que lo engañaron, la venganza ya es una justificación suficiente 
+para una matanza, pero siempre hace falta un ingrediente para “maximizar” esa matanza: el amor.", 
+20160212,20200310, 100);
+
+INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (269149, 4, "La moderna metrópoli 
+mamífera de Zootrópolis es una ciudad absolutamente única. Está compuesta de barrios con 
+diferentes hábitats como la lujosa Plaza Sahara, el Distrito Selva Tropical y el gélido Distrito 
+Tundra. Es un crisol donde los animales de cada entorno conviven, un lugar donde no importa lo que 
+seas. De hecho puedes ser cualquier cosa, desde un elefante enorme hasta la musaraña más diminuta. 
+Pero cuando llega la optimista agente Judy Hopps, descubre que ser la primera conejita de un cuerpo 
+policial compuesto de animales duros y enormes no es nada fácil. Pero está decidida a demostrar su 
+valía y se mete de cabeza en un caso, a pesar de que eso significa trabajar con Nick Wilde,
+ un zorro parlanchín y estafador, para resolver el misterio.", 
+20160304,20191020, 98);
+
 
