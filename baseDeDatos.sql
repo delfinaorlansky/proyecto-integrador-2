@@ -82,21 +82,17 @@ fecha_de_actualizacion , puntaje_sobre_pelicula) VALUES (443791, 4, "Underwater 
 submarina que da lo mejor de sí misma en su notable tramo final. ", 20200110 , 20200425 , 86 );
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (570670, 1, "El Hombre Invisible 
-es una película sobre la violencia machista, 
-sobre el maltrato, sobre el silencio
-y sobre la importancia de creer a las víctimas. 
-Leigh Whannell es un cineasta extraordinario. 
-En solo tres películas como director ha demostrado 
-que está bastante por encima de la media.", 20200228,20200420, 100);
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (570670, 1, "La nueva versión de 
+El hombre invisible tiene un concepto brillante y una ejecución irregular. 
+Pero tiene un concepto brillante, algo no tan común en el cine fantástico 
+y de terror contemporáneo (valioso por otras razones), que de alguna manera 
+arrasa con todo. ", 20200228,20200420, 100);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (539537, 2, "El enigmático 
-Sr. Roarke hace realidad los sueños de los afortunados huéspedes 
-que acuden a su lujoso y remoto resort tropical en Fantasy Island.
-Pero, sus fantasías se convertirán en pesadillas y los invitados deberán 
-resolver el misterio que oculta la isla para poder escapar con vida.",
-20200227,20200422, 98);
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (539537, 2, "Nos encontramos 
+con unas situaciones creadas a conveniencias del guion que rozan lo patético y todo 
+ello con un humor de fondo introducido en la película sin lógica, así porque sí.",
+20200227,20200422, 38);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
 fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (157336, 3, "La película 
@@ -108,12 +104,11 @@ por lo que la humanidad tiene sus días contados.",
 20140711,20191022, 95);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (512200, 4, "Jumanji: el siguiente nivel comienza 
-mostrando que los cuatro estudiantes no siguieron juntos,
- como lo prometieron, cada uno tomó su propio camino, manteniéndose fiel a su personalidad real. 
-Sin embargo, esta distancia lastimó a Spencer y lo motivó a querer
-regresar al juego para recuperar a los amigos y la seguridad 
-que había ganado en el pasado.",
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (512200, 4, "Jumanji: 
+El Siguiente Nivel trae de regreso a los protagonistas de la anterior película. 
+Gracias a la experiencia vivida dentro del videojuego, la mayoría de ellos se han 
+convertido en mejores personas y actualmente gozan de la vida universitaria y 
+nuevos proyectos de vida… Todos menos Spencer.",
 20191213,20200122, 100);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
@@ -142,14 +137,11 @@ además de huir de las artimañas del villano Doctor Ivo Robonik (Jim Carrey).",
 20200515,20200512, 95);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (420818, 3, "Es la historia 
-de Simba, un pequeño león quien debe aprender de su padre Mufasa
-todo lo que debe acerca de cómo ser un buen rey, el problema 
-está en que Simba tendrá que lidiar con las envidias familiares, 
-que llevan al hermano de su padre, Scar a confabular un terrible 
-plan para matar a Mufasa y a Simba, pero este cachorro escapa para 
-comenzar una aventura con nuevos amigos, pero al final recordará 
-quien es para recuperar su trono y salvar a toda su manada.",
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (420818, 3, "El rey leon nos 
+lleva a la sabana africana donde un futuro rey ha nacido. Simba idolatra a su padre,
+el rey Mufasa, y está entusiasmado con su destino real. Pero no todos en el reino 
+celebran la llegada del nuevo cachorro. Scar, el hermano de Mufasa y antiguo heredero 
+al trono, tiene sus propios planes. ",
 20190719,20200301, 100);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
@@ -164,12 +156,10 @@ mató a su esposa.",
 20141003,20180102, 60);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (244786, 5, "Whiplash trata sobre 
-Andrew Neyman (Miles Teller), un baterista que asiste a la Academia Shaffer de Manhattan, 
-considerada como una de las principales escuelas de música del país. Su deseo es convertirse 
-en uno de los mejores bateristas de jazz de la historia, por lo que ve como una oportunidad única 
-cuando Terence Fletcher (J.K. Simmons), un talentoso y reconocido maestro, lo invita a formar parte
-del ensamble de jazz que él mismo dirige.", 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (244786, 5, "Whiplash es un 
+thriller psicoanalítico que muestra una batalla feroz entre un estudiante de música 
+obsesionado por llegar a la cima y un profesor de música que cree que sus métodos 
+marciales son el único camino posible para encontrar al próximo Charlie Parker.", 
 20141010,20202130, 75);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
@@ -179,23 +169,14 @@ Batman se propone destruir para siempre el crimen organizado en la ciudad de Got
 20080718,20200501, 85);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (293660, 2, "Deadpool es un personaje 
-que surge como la mayoría de los héroes, una vida complicada o un acontecimiento que lo marca notablemente, 
-se encuentra con alguien que le propone cambiar todo eso e incluso mejorarlo para ser un “súper”, pero oh sorpresa, 
-todo era mentira y ahora tiene que luchar contra esos que lo engañaron, la venganza ya es una justificación suficiente 
-para una matanza, pero siempre hace falta un ingrediente para “maximizar” esa matanza: el amor.", 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (293660, 2, "Deadpool no es 
+superhéroe cualquiera, es uno que rompe los arquetipos de este tipo de personajes; 
+es vulgar, desordenado, grotesco, irascible, violento", 
 20160212,20200310, 100);
 
 INSERT INTO reseñas (id_pelicula, id_usuario, texto_de_reseña, fecha_de_creacion, 
-fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (269149, 4, "La moderna metrópoli 
-mamífera de Zootrópolis es una ciudad absolutamente única. Está compuesta de barrios con 
-diferentes hábitats como la lujosa Plaza Sahara, el Distrito Selva Tropical y el gélido Distrito 
-Tundra. Es un crisol donde los animales de cada entorno conviven, un lugar donde no importa lo que 
-seas. De hecho puedes ser cualquier cosa, desde un elefante enorme hasta la musaraña más diminuta. 
-Pero cuando llega la optimista agente Judy Hopps, descubre que ser la primera conejita de un cuerpo 
-policial compuesto de animales duros y enormes no es nada fácil. Pero está decidida a demostrar su 
-valía y se mete de cabeza en un caso, a pesar de que eso significa trabajar con Nick Wilde,
- un zorro parlanchín y estafador, para resolver el misterio.", 
+fecha_de_actualizacion, puntaje_sobre_pelicula) VALUES (269149, 4, "Zootrópolis nos 
+cuenta la historia de una coneja llamada Judy Hopps que tiene un sueño que parece muy 
+fuera del alcance para cualquier conejo, ser policía.", 
 20160304,20191020, 98);
-
 
