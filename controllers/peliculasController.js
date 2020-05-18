@@ -9,8 +9,10 @@ home: (req, res) => {
 },
 detallePelicula: (req, res) => {
     res.render('detallePelicula')
+},
+reseña: (req, res) => {
+    res.send('reseña');
 }
-
 }
 
 
