@@ -141,7 +141,7 @@ window.addEventListener("load", function(){
           var titulo = data.results[i].title
           var imagen = data.results[i].poster_path
           li = "<li class='mySlides1'>"
-            li += '<a href="detallePelicula.html?id='+id+'">'
+            li += '<a href="detallePelicula?id='+id+'">'
             li += "<img class='carousel1' src='" + urlConstante + imagen + "' >"
             li+= "</a>"
           li += '</li>'
@@ -175,7 +175,7 @@ window.addEventListener("load", function(){
             var imagen = data.results[i].poster_path
             // DEPENDE DEL CARROUSEL
             li = "<li class='mySlides2'>"
-              li += '<a href="detallePelicula.html?id='+id+'">'
+              li += '<a href="detallePelicula?id='+id+'">'
               li += "<img class='carousel1' src='" + urlConstante + imagen + "' >"
               li+= "</a>"
             li += '</li>'
@@ -212,7 +212,7 @@ window.addEventListener("load", function(){
               var imagen = data.results[i].poster_path
               // DEPENDE DEL CARROUSEL
               li = "<li class='mySlides3'>"
-                li += '<a href="detallePelicula.html?id='+id+'">'
+                li += '<a href="detallePelicula?id='+id+'">'
                 li += "<img class='carousel1' src='" + urlConstante + imagen + "' >"
                 li+= "</a>"
               li += '</li>'
@@ -247,7 +247,7 @@ window.addEventListener("load", function(){
                 var imagen = data.results[i].poster_path
                 // DEPENDE DEL CARROUSEL
                 li = "<li class='mySlides4'>"
-                  li += '<a href="detallePelicula.html?id='+id+'">'
+                  li += '<a href="detallePelicula?id='+id+'">'
                   li += "<img class='carousel1' src='" + urlConstante + imagen + "' >"
                   li+= "</a>"
                 li += '</li>'
