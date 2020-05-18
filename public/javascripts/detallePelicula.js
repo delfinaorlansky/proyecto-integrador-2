@@ -88,7 +88,7 @@ window.addEventListener("load", function(){
       var imagen = data.results[i].poster_path
       console.log(titulo)
       li = "<article class='peliculas'>"
-      li+= "<a href=detallePelicula.html?id="
+      li+= "<a href=detallePelicula?id="
       li += id
       li +=">"
       li+= "<img class='estrenos-imagenes' src='https://image.tmdb.org/t/p/original"
@@ -96,7 +96,7 @@ window.addEventListener("load", function(){
       li +="' alt='img producto'>"
   
       li += "<h2 class='titulo-producto'>"
-      li += "<a href=detallePelicula.html?id="
+      li += "<a href=detallePelicula?id="
       li += id
       li +=">"
       li +=titulo
