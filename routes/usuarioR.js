@@ -3,6 +3,6 @@ var router = express.Router();
 //esto va  a --> localhost:3000/usuarios
 
 const peliculasController = require('../controllers/peliculasController');
-router.get("/", controller.index);
+router.get("/", peliculasController.index);
 
 module.exports = router;
