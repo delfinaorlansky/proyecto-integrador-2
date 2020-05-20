@@ -15,5 +15,19 @@ reseña: (req, res) => {
 }
 }
 
+const DB = require ("../database/models");
+ DB.Usuarios.findAll ({
+     include : [
+         {association: "reseñas"}
+        ]
+ })
+  .then (usuario => {
+      return res.render("usuarioIndex", {
+          listadoUsuarios: usuarios
+      });
+  })
+
 
 module.exports = controlador
+
+

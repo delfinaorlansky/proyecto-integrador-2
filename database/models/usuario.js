@@ -11,5 +11,13 @@ module.exports = function (sequelize, DataTypes){
         timestamps = false
        }
     ); 
+ 
+    usuario.associate = function (models) {
+        usuario.hasMany (models.Reseñas, {
+            as: "reseñas" , 
+            foreingKey: "id_usuario"
+        }) ;
+    }
+
     return usuario; 
 }

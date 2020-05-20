@@ -13,5 +13,12 @@ module.exports = function (sequelize, DataTypes){
         timestamps = false
        }
     ); 
+
+    reseña.associate = function (models) {
+        reseña.belongsTo (models.Usuarios , {
+            as: "usuarios" ,
+            foreingKey: "id_usuario"
+        }); 
+    }
     return reseña; 
 }
