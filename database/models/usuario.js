@@ -5,16 +5,16 @@ module.exports = function (sequelize, DataTypes){
             nombre_de_usuario: DataTypes.STRING,
             email: DataTypes.STRING,
             password: DataTypes.STRING,
-            fecha_de_nacimiento: DataTypes.DATETIME,
+            fecha_de_nacimiento: DataTypes.DATE,
         }, 
        {
-        timestamps = false
+        timestamps: false
        }
     ); 
  
     usuario.associate = function (models) {
-        usuario.hasMany (models.Reseñas, {
-            as: "reseñas" , 
+        usuario.hasMany (models.Resenias, {
+            as: "resenias" , 
             foreingKey: "id_usuario"
         }) ;
     }

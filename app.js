@@ -10,7 +10,7 @@ var peliculasRouter = require('./routes/peliculas');
 var homeRouter = require('./routes/home');
 var detalleRouter = require('./routes/detalle');
 var usuarioRouter = require ('./routes/usuarioR');
-var reseñaRouter = require ('./routes/reseñaR');
+var reseniaRouter = require ('./routes/reseniaR');
 
 var app = express();
 
@@ -30,7 +30,7 @@ app.use('/peliculas', peliculasRouter);
 app.use('/home', homeRouter);
 app.use('/detallePelicula', detalleRouter);
 app.use('/usuario', usuarioRouter);
-app.use('/reseña', reseñaRouter);
+app.use('/resenia', reseniaRouter);
 
 
 // catch 404 and forward to error handler
