@@ -19,7 +19,9 @@ module.exports = {
     // detalle / reseña del usuario
     detalle: (req, res) => {
         DB.Usuarios
-        .findByPK (req.params.id) 
+        .findByPK (req.params.id, {
+            include: ['reseña'], 
+        }) 
         .then (usuario => {
             return res.render("usuarioDetalle", {
                 elUsuario : usuario 
