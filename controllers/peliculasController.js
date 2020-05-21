@@ -10,9 +10,7 @@ home: (req, res) => {
 detallePelicula: (req, res) => {
     res.render('detallePelicula')
 },
-reseña: (req, res) => {
-    res.send('reseña');
-}
+
 }
 
 const DB = require ("../database/models");
@@ -21,7 +19,7 @@ const DB = require ("../database/models");
          {association: "reseñas"}
         ]
  })
-  .then (usuario => {
+  .then (usuarios => {
       return res.render("usuarioIndex", {
           listadoUsuarios: usuarios
       });
