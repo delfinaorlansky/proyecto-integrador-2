@@ -10,7 +10,7 @@ module.exports = {
          })
          .then(reseñas => {
              return res.render('reseña.index', {
-                 listaReseñas: reseñas
+                 listadoReseñas: reseñas
              });
          })
          .catch(error => {
