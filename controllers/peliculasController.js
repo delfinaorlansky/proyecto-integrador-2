@@ -13,19 +13,6 @@ detallePelicula: (req, res) => {
 
 }
 
-const DB = require ("../database/models");
- DB.Usuarios.findAll ({
-     include : [
-         {association: "reseñas"}
-        ]
- })
-  .then (usuarios => {
-      return res.render("usuarioIndex", {
-          listadoUsuarios: usuarios
-      });
-  })
-
-
 module.exports = controlador
 
 
