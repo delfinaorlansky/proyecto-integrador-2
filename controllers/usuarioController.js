@@ -20,7 +20,7 @@ module.exports = {
     detalle: (req, res) => {
         DB.Usuarios
         .findByPK (req.params.id, {
-            include: ['reseña'], 
+            include: ['resenia'], 
         }) 
         .then (usuario => {
             return res.render("usuarioDetalle", {

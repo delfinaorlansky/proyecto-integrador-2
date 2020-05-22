@@ -6,6 +6,6 @@ const controller = require('../controllers/usuarioController');
 router.get("/", controller.index);
 
 // esto va a --> localhost:3000/usuario/detalle
-router.get("/detalle" , controller.index);
+router.get("/detalle/" , controller.detalle);
 
 module.exports = router;
