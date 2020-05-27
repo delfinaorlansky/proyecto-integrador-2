@@ -7,12 +7,25 @@
     <link rel="stylesheet" href="../public/css/home.css">
 </head>
 <body>
-    <h1> Detalle del Usuario: <%= elUsuario.nombre_de_usuario %>  </h1>
-    <p> 
-       <b> Email: </b> <%= elUsuario.email %>
+    <h1> Detalle del Usuario:  </h1>
+    <ul> 
+       <% for( let i = 0; i < elUsuario.length; i++) { %>
+    <p>
+       <b>Nombre:</b> <%= elUsuario.nombre_de_usuario %> 
     </p>
-    <p>   
-        <b> Reseña: </b> <%= elUsuario.resenias.texto_de_reseña %> 
+    <p>
+        <b> Email: </b> <%= elUsuario.email %>
     </p>
+     <p>
+       <b> Reseña: </b> <%= elUsuario.resenias.texto_de_reseña %>
+    </p>
+        <% } %>          
+    </ul>
 </body>
 </html>
+
+
+
+
+
+
