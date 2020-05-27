@@ -18,17 +18,25 @@ module.exports = {
  
     // detalle / reseña del usuario
     detalle: (req, res) => {
+        console.log(req.params.id)
         DB.Usuarios
-        .findByPK (req.params.id, {
-            include: ['resenia'], 
+        .findAll (
+            {
+                 where: {
+                     id: req.params.id
+                 },
+            
+            include: 
+                {association:'resenias'}
+            
         }) 
         .then (usuario => {
-            return res.render("usuarioDetalle", {
-                elUsuario : usuario 
-            }); 
+        return res.render("usuarioDetalle", {
+               elUsuario : usuario 
+           }); 
         })
         .catch (error => {
-            return res.send("error:")
+            return res.send("error:" + error)
         });
     }
 
