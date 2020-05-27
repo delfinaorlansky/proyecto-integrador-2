@@ -9,7 +9,6 @@
 <body>
     <h1> Detalle del Usuario:  </h1>
     <ul> 
-       <% for( let i = 0; i < elUsuario.length; i++) { %>
     <p>
        <b>Nombre:</b> <%= elUsuario.nombre_de_usuario %> 
     </p>
@@ -17,7 +16,8 @@
         <b> Email: </b> <%= elUsuario.email %>
     </p>
      <p>
-       <b> Reseña: </b> <%= elUsuario.resenias.texto_de_reseña %>
+        <% for( let i = 0; i < elUsuario.resenias.length; i++) { %>
+       <b> Reseña: </b> <%= elUsuario.resenias[i].texto_de_reseña %>
     </p>
         <% } %>          
     </ul>

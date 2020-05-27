@@ -32,7 +32,7 @@ module.exports = {
         }) 
         .then (usuario => {
         return res.render("usuarioDetalle", {
-               elUsuario : usuario 
+               elUsuario : usuario[0]
            }); 
         })
         .catch (error => {
