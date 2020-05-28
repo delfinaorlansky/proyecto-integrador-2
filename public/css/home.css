@@ -180,6 +180,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
+  color: rgb(104, 242, 204);
 }
 .carruseles{
   overflow: hidden;
@@ -1235,5 +1236,7 @@ a.boton_deHome {
   margin-top: 300px;
   margin-left: 260px;
 }
+
+
 
 }
