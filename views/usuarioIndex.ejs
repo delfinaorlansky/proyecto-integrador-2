@@ -10,7 +10,11 @@
     <title>Usuarios</title>
 </head>
 <body>
-  <ul>
+  <h1><%= tituloDePagina %></h1>
+   <form action="/usuario/buscador" method="POST"> 
+     <input type="text" name="busqueda" placeholder="Buscar">
+    
+     <ul>
       <% for (let i= 0; i < listadoUsuarios.length ; i++) { %>
     <li>
          <%= listadoUsuarios[i].nombre_de_usuario %>
@@ -18,6 +22,9 @@
     </li>
     <% } %> 
   </ul>
+
+  <button type="submit"> Enviar </button>
+</form>
 </body>
 </html>
 

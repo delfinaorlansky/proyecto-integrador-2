@@ -15,6 +15,7 @@ login: function(req,res){
     res.render('login', {saludo:saludo, pagina:"login"})
     
 },
+
 comparacion: function(req,res){
     moduloLogin.chequearUsuario(req.body.email)
     .then(resultado =>{
@@ -32,13 +33,13 @@ comparacion: function(req,res){
                 console.log(bcrypt.compareSync(req.body.password, usuario.userPass));
 
                 if (bycrypt.compareSync(req.body.password, usuario.userPass)){
-                    var nombre = usuario.userName
-                    var idUsuario = usuario.userId
+                    var nombre = usuario.nombre_de_usuario
+                    var idUsuario = usuario.id_usuario
 
-                    res.send( nombre + 'te has logueado satisfactoriamente, con id:' + idUsuario)
+                    res.send( nombre + 'Te logueaste, con id:' + idUsuario)
                 }
                 else{
-                    res.send('datos invalidos')
+                    res.send('Datos Invalidos')
                 }
             })
         }
@@ -46,6 +47,7 @@ comparacion: function(req,res){
 }
 
 }
+
 
 module.exports = controlador
 

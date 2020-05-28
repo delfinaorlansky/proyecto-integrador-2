@@ -9,4 +9,7 @@ router.get("/", controller.index);
 router.get("/detalle/:id" , controller.detalle);
 
 //router.get('/detalle/:id', controller ); 
+
+// esto va a --> /usuario/buscador
+router.post("/buscador", controller.buscador)
 module.exports = router;
