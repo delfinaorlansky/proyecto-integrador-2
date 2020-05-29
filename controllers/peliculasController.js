@@ -17,7 +17,18 @@ res.render('estrenos')
 popular: (req,res) =>{
     res.render('popular')
     
-    },
+},
+top100: (req,res) =>{
+    res.render('top100')
+    
+},
+proximas: (req,res) =>{
+    res.render('proximas')
+    
+},
+
+
+    
 
 
 login: function(req,res){

@@ -1,0 +1,122 @@
+*{
+    font-family: monaco;
+    box-sizing: border-box;
+}
+
+
+section article.peliculas {
+  float: left;
+  width: 30%;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-right: 5%;
+  background-color:#61F3CC;
+  height: 700px;
+}
+article.peliculas:nth-child(3n){
+  margin-right: 0;
+}
+section.section-estrenos img {
+  max-width: 100%;
+}
+
+div.estrenos img{
+  width: 90%;
+  margin: 0 auto;
+}
+
+img.estrenos-imagenes{
+  border: white;
+  border-style: double;
+}
+
+#estrenos{
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  }
+
+  h2.subtitulo{
+    font-size: 2rem;
+    background-color: #68f2cc;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border-style: double;
+    border-color: black;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    section article.peliculas {
+      float: left;
+      width: 45%;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-right: 10%;
+      background-color:#61F3CC;
+      height: 500px;
+    }
+    article.peliculas:nth-child(3n){
+      margin-right: 10%;
+    }
+    article.peliculas:nth-child(2n){
+      margin-right: 0;
+    }
+
+  a.item{
+    position: relative;
+      bottom: 22px;
+      left: 205px;
+  }
+
+
+  button.w3-button.w3-black {
+      position: relative;
+      bottom: 22px;
+      left: 184px;
+      background-color: rgb(104,242,204)!important;
+  }
+
+    
+
+    .tmdb-logo{
+      display: none;
+    }
+
+    form.busqueda{
+      display: none;
+    }
+
+    a.boton_deHome {
+        position: relative;
+        bottom: 41px;
+        left: 565px;
+        z-index: 1;
+    }
+    button.w3-button.w3-black {
+        position: relative;
+        bottom: 22px;
+        left: 458px;
+        background-color: rgb(104,242,204)!important;
+    }
+    p.boton_log_out {
+        position: relative;
+        bottom: -12px;
+        right: -40px;
+    }
+    a.preferidas {
+        bottom: 76px;
+        right: -219px;
+    }
+
+    a.boton_deHome {
+        display: block!important;
+        position: relative;
+        bottom: 43px;
+        left: 308px;
+        z-index: 1;
+
+    }
+  }
