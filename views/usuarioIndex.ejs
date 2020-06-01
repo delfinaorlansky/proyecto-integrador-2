@@ -14,14 +14,18 @@
    <form action="/usuario/buscador" method="POST"> 
      <input type="text" name="busqueda" placeholder="Buscar">
     
+     <% if (listadoUsuarios.length !=0) { %>  
      <ul>
       <% for (let i= 0; i < listadoUsuarios.length ; i++) { %>
     <li>
-         <%= listadoUsuarios[i].nombre_de_usuario %>
+         <%= listadoUsuarios[i].nombre_de_usuario + " " + listadoUsuarios[i].email %>
          <a href="/usuario/detalle/<%= listadoUsuarios [i].id %> "> Ver Detalle </a>       
     </li>
     <% } %> 
   </ul>
+  <% } else { %> 
+    <p> No se encontraron usuarios</p>
+    <% } %> 
 
   <button type="submit"> Enviar </button>
 </form>

@@ -52,19 +52,15 @@ module.exports = {
           }
      })
       .then(usuarios => {  //usuarios puede ser un nombre cualqueira. Va a ser el nombre a lo que obtenemos de respuesta del pedido asincronico. 
-        if (usuarios.lenght !=0) { 
-        return res.render("usuarioIndex" , {
+          res.render("usuarioIndex" , {
             listadoUsuarios: usuarios,
             tituloDePagina: "Resultado de la busqueda"  //no hago otra view, uso la misma donde liste a los usuarios.
-        });
-    } else {
-        res.render("usuarioIndex" , {
-            usuarios: "No se encontraron resultados"
         })
-    }
-      })
+    })
      
     },
+
+    
     logUser: function (req,res) {
         res.render('login', { tipo: "log"});
     },
@@ -73,9 +69,9 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado =>{
             if(resultado == undefined){
-                res.redirect('/users/reviews');
+                res.redirect('/usuarioR/reviews');
             } else {
-                res.redirect('/users/reviews' + resultado.id)
+                res.redirect('/usuarioR/reviews' + resultado.id)
             }
         })
     },
@@ -122,7 +118,7 @@ module.exports = {
         ).then(() => {
             DB.resenia.findByPk(req.params.id)
             .then(resultado =>{
-                res.redirect('/users/reviews/'+resultado.id_usuario)
+                res.redirect('/usuarioR/reviews/'+resultado.id_usuario)
             })
         })
     },
@@ -140,9 +136,9 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/users/reviews')
+                res.redirect('/usuarioR/reviews')
             }else{
-                res.redirect('/users/reviews/delete/'+ req.params.id)
+                res.redirect('/usuarioR/reviews/delete/'+ req.params.id)
             }
         })
     },
