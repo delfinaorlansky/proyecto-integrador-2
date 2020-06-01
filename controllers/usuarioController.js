@@ -70,7 +70,7 @@ module.exports = {
         password: bcrypt.hashSync(req.body.password)
      })
      .then (resultado => {
-         res.redirect ("/home")  // Una vez registrado, que lo devuelva a la pagina de home.
+         res.redirect ("/")  // Una vez registrado, que lo devuelva a la pagina de home.
      })
 
     },
