@@ -8,7 +8,9 @@ home: (req, res) => {
 
 },
 detallePelicula: (req, res) => {
-    res.render('detallePelicula')
+    res.render('detallePelicula', {
+        id_pelicula: req.query.id
+    })
 },
 estrenos: (req,res) =>{
 res.render('estrenos')

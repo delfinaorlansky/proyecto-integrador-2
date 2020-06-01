@@ -121,6 +121,43 @@
     </section>
 
 
+  </div>
+  <!-- ACA ARRANCA EL FORMULARIO PARA CREAR RESEÑA-->
+   <h2> DEJANOS TU COMENTARIO!</h2>
+   <form action="/resenia/creaResenia" method="POST">
+   <div>
+     <input type="hidden" name="id_pelicula" value=" <%= id_pelicula %>" >
+   </div>
+
+   <div>
+     <label for="email"> Email </label>
+     <input type="email" id="email" name="email">
+   </div>
+
+   <br>
+
+    <div>
+    <label for="password"> Contraseña</label>
+    <input type="password" id="password" name="password">
+    </div>
+
+    <br>
+
+    <div>
+      <textarea name="texto_de_reseña" id="texto_de_reseña" cols="30" rows="10" placeholder="Escribi acá"></textarea>
+    </div>
+     <br>
+
+     <div>
+      <label for="puntaje_sobre_reseña"> Puntaje</label>
+      <input type="number" id="puntaje_sobre_reseña" name="puntaje_sobre_reseña">
+      </div>
+
+   
+
+     <button type="submit" > Enviar </button>
+  <!-- Termina el formulario para crear reseña-->
+</form>
 
     <footer>
     <div class="padre-footer">
@@ -140,12 +177,7 @@
     </footer>
 
 
-    </div>
-    <!-- 
-      ACA TENGO QUE CREAR UN FORMULARIO PARA ARMAR UNA RESEÑA (USUARIO PJE LOS DATOS PARA CREAR)
-      En el controlador tengo que poner: 
-    -->
-  </body>
+    </body>
 </html>
 
 

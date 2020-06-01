@@ -6,7 +6,7 @@ module.exports = {
 
    //todos los usuarios
     index: (req,res) => {
-        DB.Usuarios
+        DB.usuario
          .findAll()
          .then(usuarios => {
              return res.render("usuarioIndex" , {
@@ -22,7 +22,7 @@ module.exports = {
     // detalle del usuario con su reseña 
     detalle: (req, res) => {
         console.log(req.params.id)
-        DB.Usuarios
+        DB.usuario
         .findAll (
             {
                  where: {
@@ -46,7 +46,7 @@ module.exports = {
     //Buscador de usuario
     buscador: (req, res) => {
     let busquedaUsuario = req.body.busqueda //aca almacenamos en una variable lo que busco el usuario. Uso .body porque me estoy manejando por POST.
-     DB.Usuarios
+     DB.usuario
      .findAll({
           where: {    //objeto literal de lo que quiero que me traiga.
               email: { [OP.like]: "%"+ busquedaUsuario+ "%" }  // Comodin --> pongo el porcentaje en ambos lados asi me busca lo que coincida con lo que esta en el medio, en cualquier parte de la palabra.
@@ -63,7 +63,7 @@ module.exports = {
 
     // Crear nuevo Usuario
     creadorUsuario : (req,res) => {
-     DB.Usuarios.create ({   // A create le paso un objeto literal con el nombre del campo de la columna. Es asincronico.
+     DB.usuario.create ({   // A create le paso un objeto literal con el nombre del campo de la columna. Es asincronico.
         nombre_de_usuario: req.body.nombre_de_usuario,
         email: req.body.email,
         fecha_de_nacimiento: req.body.fecha_de_nacimiento,
