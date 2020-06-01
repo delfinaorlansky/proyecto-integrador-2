@@ -64,6 +64,88 @@ module.exports = {
     }
       })
      
-    }
+    },
+    logUser: function (req,res) {
+        res.render('login', { tipo: "log"});
+    },
+
+    confirmUser: function (req, res) {
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then(resultado =>{
+            if(resultado == undefined){
+                res.redirect('/users/reviews');
+            } else {
+                res.redirect('/users/reviews' + resultado.id)
+            }
+        })
+    },
+    getReviews: function(req,res){
+        DB.resenia.findAll({
+            where: [
+                {id_usuario: req.params.id}
+            ],
+            include: [
+                {association: "usuario"}
+            ]
+        })
+        .then(resultado =>{
+            console.log(resultado);
+            res.render('reviews', {resultado:resultado})
+        })
+    },
+
+    showEdit: function (req,res){
+        DB.resenia.findeOne({
+            where: [
+                {id: req.params.id}
+            ]
+        })
+        .then(resultado => {
+            res.render('editReview', {resultado: resultado})
+        })
+    },
+
+    confirmEdit: function (req,res) {
+        let updateR = {
+            resenia: req.body.resenia,
+            puntaje: req.body.puntaje,
+            id: req.params.id
+        }
+        DB.resenia.update({
+            resenia: updateR.resenia,
+            puntaje: updateR.puntaje
+        },{
+            where: {
+                id: updateR.id,
+            }
+        }
+        ).then(() => {
+            DB.resenia.findByPk(req.params.id)
+            .then(resultado =>{
+                res.redirect('/users/reviews/'+resultado.id_usuario)
+            })
+        })
+    },
+
+    deleteReview: function (req,res){
+        res.render('login', {tipo: "delete", deleteid: req.params.id})
+    },
+
+    confirmDelete: function (req, res){
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then(resultado =>{
+            if (resultado != null){
+                DB.resenia.destroy({
+                    where: {
+                        id: req.params.id,
+                    }
+                })
+                res.redirect('/users/reviews')
+            }else{
+                res.redirect('/users/reviews/delete/'+ req.params.id)
+            }
+        })
+    },
+
    
 };
