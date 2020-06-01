@@ -24,19 +24,19 @@ router.post("/crearUsuario" , controller.creadorUsuario)
 
 // router.get('/list', controller.getAll);
 
-router.get('/reviews', controller.logUser);
+router.get('/reviews', controller.logUser); // formulario de logueo
 
-router.post('/reviews', controller.confirmUser);
+router.post('/reviews', controller.confirmUser); // Proceso el login y redirecciona al listado de mis reseñas
 
-router.get('/reviews/:id', controller.getReviews);
+router.get('/reviews/:id', controller.getReviews); // Listado de mis reseñas
 
-router.get('/reviews/edit/:id', controller.showEdit);
+router.get('/reviews/edit/:id', controller.showEdit); // Formulario para editar una reseña
 
-router.post('/reviews/edit/:id', controller.confirmEdit);
+router.post('/reviews/edit/:id', controller.confirmEdit); // procesa la edicion de una reseña
 
-router.get('/reviews/delete/:id', controller.deleteReview);
+router.get('/reviews/delete/:id', controller.deleteReview); // Formulario para confirmar eliminacion de reseña
 
-router.post('/reviews/delete/:id', controller.confirmDelete);
+router.post('/reviews/delete/:id', controller.confirmDelete); // Proceso que confirma la eliminacion
 
 
 module.exports = router;
