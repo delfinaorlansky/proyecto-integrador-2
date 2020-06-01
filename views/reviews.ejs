@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+<% for( let i=0; i < resultado.length; i++) { %>
+    <div class="uk-card uk-card-secondary uk-margin">
+        <div class="uk-card-badge uk-label uk-margin-bottom" style="color: white;"> Score: <%=
+        resultado[i].puntaje %> </div>
+        <div class="uk-card-body">
+            <h4 class="uk-margin-top"> <%= resultado[i].resenia %> </h4>
+        </div>
+        <div class="uk-card-footer uk-flex uk-flex-between">
+            <a class="uk-text-success" href="/usuario/reviews/edit/<%= resultado[i].id %>">Edit</a>
+            <a class="uk-text-primary" href="/detalle?idPelicula= <%= resultado[i].id_pelicula %>">Go to Movie</a>
+            <a class="uk-text-danger" href="/usuario/reviews/delete/<%= resultado[i].id %>">Delete</a>
+
+
+        </div>
+
+    </div>
+
+<% } %>
+
+    </div>
+</body>
+</html>

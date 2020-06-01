@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="uk-container">
+        <div class="uk-section uk-section-large">
+            <form id="formlogin" method="POST" class="uk-background-secundary uk-padding uk-padding-large" action="/usuario/reviews/edit<%= resultado.id %>">
+                <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                        <input class="uk-input" type="text" id="email" name="email" placeholder="email...">
+                    </div>
+                </div>
+            
+                <div class="uk-margin">
+                    <div class="uk-inline uk-width-2-3">
+                        <span class="uk-form-icon" uk-icon="icon: pencil"></span>
+                        <input class="uk-input" type="password" id="pass" name="password" placeholder="password...">
+                    </div>
+                 </div>
+                 <div class="uk-margin">
+                     <div class="uk-inline uk-width-2-3">
+                         <label for="resenia">Review</label>
+                         <textarea class="uk-textarea" value="" name="resenia" id="" cols="50" rows="3" id="resenia">
+                             <%= resultado.resenia %>
+                            </textarea>
+                     </div>
+                 </div>
+                 <div class="uk-margin">
+                     <label for="resenia" class="uk-form-width-medium uk-label uk-margin-bottom">Puntaje:</label>
+                     <input type="range" id="points" name="puntaje" class="uk-range" min="0" max="10" onchange="updateValue(this.value)">
+                     <p id="valorRange" style="color:white"> <%= resultado.puntaje %></p>
+                 </div>
+            
+            </form>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
