@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 
 let moduloLogin = {
     chequearUsuario: function (email) {
-        return db.Usuarios.findOne({
+        return db.usuario.findOne({
             where: {
                 email: email
             }
@@ -14,7 +14,7 @@ let moduloLogin = {
     },
 
     buscarPorEmail: function (email){
-        return db.Usuarios.findOne({
+        return db.usuario.findOne({
             where: {
                 email:email
             }
@@ -25,7 +25,7 @@ let moduloLogin = {
     },
 
     validar: function (email, pass) {
-        return db.Usuarios.findOne({
+        return db.usuario.findOne({
             where:{
                 email:email,
                // password: pass
