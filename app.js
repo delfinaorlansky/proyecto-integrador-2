@@ -29,10 +29,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+
 app.use('/users', usersRouter);
 app.use('/peliculas', peliculasRouter);
-app.use('/home', homeRouter);
+app.use('/', homeRouter);
 app.use('/detallePelicula', detalleRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/resenia', reseniaRouter);
