@@ -1,6 +1,7 @@
 const DB = require ("../database/models");
 const OP = DB.Sequelize.Op;  //operadores de sequelize que necesito incluir (tipo like)
 let bcrypt = require ("bcryptjs") ; // Me da funciones, le das un string y lo hashea.
+const moduloLogin = require('../modulo-login');
 
 module.exports = { 
 
@@ -84,14 +85,14 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado =>{
             if(resultado == undefined){
-                res.redirect('/usuarioR/reviews');
+                res.redirect('/usuario/reviews');
             } else {
-                res.redirect('/usuarioR/reviews' + resultado.id)
+                res.redirect('/usuario/reviews/' + resultado.id)
             }
         })
     },
     getReviews: function(req,res){
-        DB.resenia.findAll({
+        DB.Resenias.findAll({
             where: [
                 {id_usuario: req.params.id}
             ],
@@ -106,7 +107,7 @@ module.exports = {
     },
 
     showEdit: function (req,res){
-        DB.resenia.findeOne({
+        DB.Resenias.findeOne({
             where: [
                 {id: req.params.id}
             ]
@@ -122,7 +123,7 @@ module.exports = {
             puntaje: req.body.puntaje,
             id: req.params.id
         }
-        DB.resenia.update({
+        DB.Resenias.update({
             resenia: updateR.resenia,
             puntaje: updateR.puntaje
         },{
@@ -131,9 +132,9 @@ module.exports = {
             }
         }
         ).then(() => {
-            DB.resenia.findByPk(req.params.id)
+            DB.Resenias.findByPk(req.params.id)
             .then(resultado =>{
-                res.redirect('/usuarioR/reviews/'+resultado.id_usuario)
+                res.redirect('/usuario/reviews/'+resultado.id_usuario)
             })
         })
     },
@@ -151,9 +152,9 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/usuarioR/reviews')
+                res.redirect('/usuario/reviews')
             }else{
-                res.redirect('/usuarioR/reviews/delete/'+ req.params.id)
+                res.redirect('/usuario/reviews/delete/'+ req.params.id)
             }
         })
     },
