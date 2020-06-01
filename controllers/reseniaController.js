@@ -22,10 +22,27 @@ module.exports = {
         });
     },
 
-    form: function(req, res) {
-        res.render('nuevaResenia', {
-            id_pelicula: req.query.id_pelicula
-        })
+
+    creaResenia: function (req, res) {
+      moduloLogin.validar (req.body.email, req.body.password)  //para poder validar
+      .then (function (usuario) {
+          if (usuario) {   // Solo quiero una reseña si me retorna bien los datos del usuario.
+            const resenia = {
+                id_pelicula: req.body.id_pelicula,
+                id_usuario: usuario.id,
+                texto_de_reseña: req.body.texto_de_reseña,
+                puntaje_sobre_pelicula: req.body.puntaje_sobre_pelicula
+            }
+
+            
+              DB.Resenias.create ( resenia)
+              .then (function (resultado) {
+                  res.send ("Gracias! Tu reseña se creo correctamente")
+              })
+          } else {
+              res.send ("Hubo un problema! El email o la contraseña no son correctos")
+          }
+      })
     }
     
 };

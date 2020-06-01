@@ -1,5 +1,5 @@
 let db = require('./database/models')
-let bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs')
 
 let moduloLogin = {
     chequearUsuario: function (email) {
@@ -44,6 +44,7 @@ let moduloLogin = {
             }
             
         })
+        .catch(e => console.log(e))
     }
 }
 
