@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if (tipo == "delete") { %>
+    <form id="formlogin" method="POST" class="uk-background-secondary uk-padding uk-padding-large" action="/usuario/reviews/delete/<%= deleteId %> ">
+    <h1 style="color: white;">Delete</h1>
+    <p>Confirm user to erase a review</p>
+    <div class="uk-margin">
+        <div class="uk-inline uk-width-2-3">
+            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+            <input class="uk-input" type="text" id="email" name="email" placeholder="email...">
+        </div>
+    </div>
+
+    <div class="uk-margin">
+        <div class="uk-inline uk-width-2-3">
+            <span class="uk-form-icon" uk-icon="icon: pencil"></span>
+            <input class="uk-input" type="password" id="pass" name="password" placeholder="password...">
+        </div>
+     </div>
+     <button type="submit" name="button">Confirm</button>
+</form>
+<% } else { %>
+    <form id="formlogin" method="POST" class="uk-background-secondary uk-padding uk-padding-large" action="/usuario/reviews">
+    <h1 style="color: white;">Login</h1>
+    <div class="uk-margin">
+        <div class="uk-inline uk-width-2-3">
+            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+            <input class="uk-input" type="text" id="email" name="email" placeholder="email...">
+        </div>
+    </div>
+    <div class="uk-margin">
+        <div class="uk-inline uk-width-2-3">
+            <span class="uk-form-icon" uk-icon="icon: pencil"></span>
+            <input class="uk-input" type="password" id="pass" name="password" placeholder="password...">
+        </div>
+     </div>
+
+    </form>
+
+}
+</body>
+</html>
