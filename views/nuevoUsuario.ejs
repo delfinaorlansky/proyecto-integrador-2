@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/detallePelicula.css">
+
+    <title> Registrate!</title>
+</head>
+<h1> ¡Registrate!</h1>
+<body>
+    <form action="/usuario/crearUsuario" method="POST"> 
+<div>
+    <label for=""> Nombre de usuario </label>
+    <input type="text" id="nombre_de_usuario" name= "nombre_de_usuario" required>
+</div>
+ <br>
+<div>
+    <label for=" "> Email </label>
+    <input type="email" id="email" name="email" required>
+</div>
+
+<br>
+
+<div>
+    <label for=" "> Fecha de Nacimiento</label>
+    <input type="date" id="fecha_de_nacimiento" name="fecha_de_nacimiento" required>
+</div>
+
+<br>
+
+<div>
+    <label for=" "> Contraseña </label>
+    <input type="password" id="password" name="password" required>
+</div>
+
+<br>
+
+<button value="submit" type="submit"> Enviar </button>
+
+    </form>
+</body>
+</html>

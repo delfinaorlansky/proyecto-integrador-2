@@ -1,7 +1,8 @@
 const DB = require ("../database/models");
 const OP = DB.Sequelize.Op;  //operadores de sequelize que necesito incluir (tipo like)
+let bcrypt = require ("bcryptjs") ; // Me da funciones, le das un string y lo hashea.
 
-module.exports = {
+module.exports = { 
 
    //todos los usuarios
     index: (req,res) => {
@@ -48,7 +49,7 @@ module.exports = {
      DB.Usuarios
      .findAll({
           where: {    //objeto literal de lo que quiero que me traiga.
-              email: { [OP.like]: "%"+ busquedaUsuario+ "%" }  //pongo el porcentaje en ambos lados asi me busca lo que coincida con lo que esta en el medio, en cualquier parte de la palabra.
+              email: { [OP.like]: "%"+ busquedaUsuario+ "%" }  // Comodin --> pongo el porcentaje en ambos lados asi me busca lo que coincida con lo que esta en el medio, en cualquier parte de la palabra.
           }
      })
       .then(usuarios => {  //usuarios puede ser un nombre cualqueira. Va a ser el nombre a lo que obtenemos de respuesta del pedido asincronico. 
@@ -60,7 +61,21 @@ module.exports = {
      
     },
 
-    
+    // Crear nuevo Usuario
+    creadorUsuario : (req,res) => {
+     DB.Usuarios.create ({   // A create le paso un objeto literal con el nombre del campo de la columna. Es asincronico.
+        nombre_de_usuario: req.body.nombre_de_usuario,
+        email: req.body.email,
+        fecha_de_nacimiento: req.body.fecha_de_nacimiento,
+        password: bcrypt.hashSync(req.body.password)
+     })
+     .then (resultado => {
+         res.redirect ("/home")  // Una vez registrado, que lo devuelva a la pagina de home.
+     })
+
+    },
+
+
     logUser: function (req,res) {
         res.render('login', { tipo: "log"});
     },
