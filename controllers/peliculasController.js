@@ -10,6 +10,27 @@ home: (req, res) => {
 detallePelicula: (req, res) => {
     res.render('detallePelicula')
 },
+estrenos: (req,res) =>{
+res.render('estrenos')
+
+},
+popular: (req,res) =>{
+    res.render('popular')
+    
+},
+top100: (req,res) =>{
+    res.render('top100')
+    
+},
+proximas: (req,res) =>{
+    res.render('proximas')
+    
+},
+
+
+    
+
+
 login: function(req,res){
     var saludo = "hola"
     res.render('login', {saludo:saludo, pagina:"login"})
