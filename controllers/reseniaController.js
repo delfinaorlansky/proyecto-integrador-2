@@ -1,4 +1,5 @@
 const DB = require ("../database/models");
+const moduloLogin = require ("../modulo-login"); //para poder validar
 
 module.exports = {
 
@@ -20,12 +21,11 @@ module.exports = {
             return res.send(error);
         });
     },
-    const moduloLogin: require ("../moduloLogin"); //para poder validar
-    module.exports= {
-        form: function(req, res) {
-            res.render('nuevaResenia', {
-                id_pelicula: req.query.id_pelicula
-            })
-        }
+
+    form: function(req, res) {
+        res.render('nuevaResenia', {
+            id_pelicula: req.query.id_pelicula
+        })
     }
+    
 };
