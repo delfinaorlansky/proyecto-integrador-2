@@ -7,5 +7,5 @@ router.get("/", controller.index);
 
 
 router.post('/creaResenia', controller.creaResenia)
-router.get('/info',controller.info)
+
 module.exports = router;

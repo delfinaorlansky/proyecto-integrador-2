@@ -44,22 +44,4 @@ module.exports = {
           }
       })
     },
-info: (req, res) => {
-    DB.Resenias
-    .findAll ({
-        where: [
-           { id_pelicula: req.query.id }
-        ], 
-        include: ['usuario']
-    }) 
-    .then(resenias => {
-        return res.render('info', {
-            reseniaPelicula: resenias
-        });
-    }) 
-    .catch(error => {
-        res.send (error)
-    })
-}, 
-    
 };

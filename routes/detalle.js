@@ -3,6 +3,8 @@ var router = express.Router();
 
 
 const peliculasController = require('../controllers/peliculasController');
+
+//localhost:3000/detallePelicula
 router.get('/', peliculasController.detallePelicula);
 
 
