@@ -35,7 +35,7 @@ module.exports = {
             }
 
             
-              DB.Resenias.create ( resenia)
+              DB.Resenias.create (resenia)
               .then (function (resultado) {
                   res.send ("Gracias! Tu reseña se creo correctamente")
               })
@@ -43,6 +43,23 @@ module.exports = {
               res.send ("Hubo un problema! El email o la contraseña no son correctos")
           }
       })
-    }
+    },
+info: (req, res) => {
+    DB.Resenias
+    .findAll ({
+        where: [
+           { id_pelicula: req.query.id }
+        ], 
+        include: ['usuario']
+    }) 
+    .then(resenias => {
+        return res.render('info', {
+            reseniaPelicula: resenias
+        });
+    }) 
+    .catch(error => {
+        res.send (error)
+    })
+}, 
     
 };
