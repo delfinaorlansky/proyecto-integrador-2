@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editando tu Reseña</title>
     <link rel="stylesheet" href="/css/home.css">
     </head>
 <body>
@@ -11,7 +11,7 @@
         <br>
         <br>
         <br>
-        <h1>Modifica tu review </h1>
+        <h1>Modifica tu reseña </h1>
         <div class="uk-section uk-section-large">
             
             <form id="formlogin" method="POST" class="uk-background-secundary uk-padding uk-padding-large" action="/usuario/reviews/edit/<%= resultado.id %>">
@@ -27,13 +27,13 @@
                     <div class="uk-inline uk-width-2-3">
                         <label for="resenia">Password:</label>
                         <span class="uk-form-icon" uk-icon="icon: pencil"></span>
-                        <input class="uk-input" type="password" id="pass" name="password" placeholder="password...">
+                        <input class="uk-input" type="password" id="pass" name="password" placeholder="contraseña...">
                     </div>
                  </div>
                  <br>
                  <div class="uk-margin">
                      <div class="uk-inline uk-width-2-3">
-                         <label for="resenia">Review:</label>
+                         <label for="resenia">Reseña:</label>
                          <textarea class="uk-textarea" value="" name="resenia" id="" cols="50" rows="3" id="resenia">
                              <%= resultado.texto_de_reseña %>
                             </textarea>

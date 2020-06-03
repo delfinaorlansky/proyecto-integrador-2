@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reseñas</title>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
@@ -14,10 +14,10 @@
     <div style="text-align: center;" class="uk-container"> 
         <div class="uk-section uk-section-large">
             <% if (resultado.length == 0) { %>
-                <h1>You Havent made any reviews yet...</h1>
+                <h1>Todavia no hiciste ninguna reseña...</h1>
                 <a style=color:red href="/"> Volver a Home</a>
             <%} else { %>
-                <h1 class="uk-text-center"> <%= resultado[0].usuario.nombre_de_usuario %>'s reviews</h1>
+                <h1 class="uk-text-center"> Reseñas de <%= resultado[0].usuario.nombre_de_usuario %> </h1>
 
                 <% for(let i=0; i < resultado.length; i++) { %>
                     <div style="background-color: white;" class="uk-card uk-card-secondary uk-margin">
@@ -28,9 +28,9 @@
                             <h4 class="uk-margin-top"> <%= resultado[i].texto_de_reseña %> </h4>
                         </div>
                         <div class="uk-card-footer uk-flex uk-flex-between">
-                            <a class="uk-text-success ups" href="/usuario/reviews/edit/<%= resultado[i].id%>">Edit</a>
-                            <a class="uk-text-primary ups" href="/detallePelicula?id=<%= resultado[i].id_pelicula %>">Go to Movie</a>
-                            <a class="uk-text-danger ups" href="/usuario/reviews/delete/<%= resultado[i].id %>">Delete</a>
+                            <a class="uk-text-success ups" href="/usuario/reviews/edit/<%= resultado[i].id%>">Editar</a>
+                            <a class="uk-text-primary ups" href="/detallePelicula?id=<%= resultado[i].id_pelicula %>">Ir a pelicula</a>
+                            <a class="uk-text-danger ups" href="/usuario/reviews/delete/<%= resultado[i].id %>">Borrar</a>
                         </div>
                     </div>
 
