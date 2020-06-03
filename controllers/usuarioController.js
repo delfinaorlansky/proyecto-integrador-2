@@ -84,6 +84,7 @@ module.exports = {
     confirmUser: function (req, res) {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado =>{
+           //res.send(resultado);
             if(resultado == undefined){
                 res.redirect('/usuario/reviews');
             } else {
