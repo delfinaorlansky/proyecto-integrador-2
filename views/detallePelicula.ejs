@@ -125,7 +125,7 @@
   </div>
   <% if (reseniaPelicula.length !=0) { %>
     <ul>
-      <h2 style="color: turquoise; text-align: center;"> Resenas de esta pelicula:</h2>
+      <h2 style="color: turquoise; text-align: center;"> Reseñas de esta pelicula:</h2>
         <% for(let i= 0; i< reseniaPelicula.length; i++) { %>
             <li style="background-color: turquoise; color: black ;">
               <p>Autor de reseña: <a href="usuario/detalle/<%=reseniaPelicula[i].usuario.id %>"> <%= reseniaPelicula[i].usuario.nombre_de_usuario %></a> </p>
