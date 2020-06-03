@@ -125,6 +125,7 @@
   </div>
   <% if (reseniaPelicula.length !=0) { %>
     <ul>
+      <h2 style="color: turquoise; text-align: center;"> Resenas de esta pelicula:</h2>
         <% for(let i= 0; i< reseniaPelicula.length; i++) { %>
             <li style="background-color: turquoise; color: black ;">
               <p>Autor de reseña: <a href="usuario/detalle/<%=reseniaPelicula[i].usuario.id %>"> <%= reseniaPelicula[i].usuario.nombre_de_usuario %></a> </p>
@@ -135,12 +136,12 @@
             <% } %>
     </ul>
     <% } else { %>
-        <p> No hay ninguna reseña de esta pelicula, !Agreaga la tuya!</p>
+        <h2 style="text-align: center; color: red;">No hay ninguna reseña de esta pelicula, Agrega la tuya!</h2> 
         <% } %>
   <!-- ACA ARRANCA EL FORMULARIO PARA CREAR RESEÑA-->
-   <h2> DEJANOS TU COMENTARIO SOBRE LA PELICULA!</h2>
-   <form action="/resenia/creaResenia" method="POST">
-  
+   <h2 style="text-align: center; color: red;"> DEJANOS TU COMENTARIO SOBRE LA PELICULA!</h2>
+   <form style="text-align: center;" action="/resenia/creaResenia" method="POST">
+  <input type="hidden" value="<%=idPelicula%>" name="id_pelicula">
    <div>
      <label for="email"> Email </label>
      <input type="email" id="email" name="email">

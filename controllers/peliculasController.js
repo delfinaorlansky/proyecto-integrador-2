@@ -19,7 +19,8 @@ detallePelicula: (req, res) => {
     }) 
     .then(resenias => {
         return res.render('detallePelicula', {
-            reseniaPelicula: resenias
+            reseniaPelicula: resenias,
+            idPelicula: req.query.id
         });
     }) 
     .catch(error => {
