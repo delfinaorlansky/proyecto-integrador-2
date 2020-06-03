@@ -118,17 +118,13 @@ module.exports = {
     },
 
     confirmEdit: function (req,res) {
-        let updateR = {
-            resenia: req.body.resenia,
-            puntaje: req.body.puntaje,
-            id: req.params.id
-        }
+
         DB.Resenias.update({
-            resenia: updateR.resenia,
-            puntaje: updateR.puntaje
+            texto_de_reseña: req.body.resenia,
+            puntaje_sobre_pelicula: req.body.puntaje
         },{
             where: {
-                id: updateR.id,
+                id: req.params.id,
             }
         }
         ).then(() => {
