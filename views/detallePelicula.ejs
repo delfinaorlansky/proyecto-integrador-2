@@ -124,7 +124,7 @@
 
   </div>
   <!-- ACA ARRANCA EL FORMULARIO PARA CREAR RESEÑA-->
-   <h2> DEJANOS TU COMENTARIO!</h2>
+   <h2> DEJANOS TU COMENTARIO SOBRE LA PELICULA!</h2>
    <form action="/resenia/creaResenia" method="POST">
    <div>
      <input type="hidden" name="id_pelicula" value=" <%= id_pelicula %>" >
@@ -150,8 +150,19 @@
      <br>
 
      <div>
-      <label for="puntaje_sobre_reseña"> Puntaje</label>
-      <input type="number" id="puntaje_sobre_reseña" name="puntaje_sobre_pelicula">
+      <label for="puntaje_sobre_pelicula"> Puntaje</label>
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="0" > 0
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="1" > 1
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="2" > 2
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="3" > 3
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="4" > 4
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="5" > 5
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="6" > 6
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="7" > 7
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="8" > 8
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="9" > 9
+       <input type="radio" id="puntaje_sobre_pelicula" name="puntaje_sobre_pelicula" value="10" > 10
+
       </div>
 
    

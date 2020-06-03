@@ -192,7 +192,9 @@ fuera del alcance para cualquier conejo, ser policía.',
 '2016-03-04' ,'2019-10-20', 98);
 
 
+ALTER TABLE proyecto_integrador_2.reseñas MODIFY COLUMN fecha_de_actualizacion TIMESTAMP on update CURRENT_TIMESTAMP NULL;
 
+ALTER TABLE proyecto_integrador_2.reseñas MODIFY COLUMN fecha_de_creacion timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL;
 
 
 
