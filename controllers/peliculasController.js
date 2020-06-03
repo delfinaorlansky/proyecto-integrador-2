@@ -1,3 +1,5 @@
+const DB= require('../database/models')
+
 const controlador = {
 
 index: (req, res) => {
@@ -8,10 +10,22 @@ home: (req, res) => {
 
 },
 detallePelicula: (req, res) => {
-    res.render('detallePelicula', {
-        id_pelicula: req.query.id
+    DB.Resenias
+    .findAll ({
+        where: [
+           { id_pelicula: req.query.id }
+        ], 
+        include: ['usuario']
+    }) 
+    .then(resenias => {
+        return res.render('detallePelicula', {
+            reseniaPelicula: resenias
+        });
+    }) 
+    .catch(error => {
+        res.send (error)
     })
-},
+}, 
 estrenos: (req,res) =>{
 res.render('estrenos')
 

@@ -107,7 +107,7 @@ module.exports = {
     },
 
     showEdit: function (req,res){
-        DB.Resenias.findeOne({
+        DB.Resenias.findOne({
             where: [
                 {id: req.params.id}
             ]
@@ -140,14 +140,14 @@ module.exports = {
     },
 
     deleteReview: function (req,res){
-        res.render('login', {tipo: "delete", deleteid: req.params.id})
+        res.render('login', { tipo: "delete", deleteid: req.params.id})
     },
 
     confirmDelete: function (req, res){
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado =>{
             if (resultado != null){
-                DB.resenia.destroy({
+                DB.Resenias.destroy({
                     where: {
                         id: req.params.id,
                     }
