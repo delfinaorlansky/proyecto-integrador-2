@@ -437,6 +437,9 @@ div.estrenos img{
   text-decoration: none;
   color: black;
 }
+a.ups:hover{
+color: rgb(104, 242, 204);
+}
 
 .h3_carousel:hover{
   color: black;

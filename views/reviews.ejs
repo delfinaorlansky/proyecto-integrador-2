@@ -10,11 +10,12 @@
     <br>
     <br>
     <br>
-    
+
     <div style="text-align: center;" class="uk-container"> 
         <div class="uk-section uk-section-large">
             <% if (resultado.length == 0) { %>
                 <h1>You Havent made any reviews yet...</h1>
+                <a style=color:red href="/"> Volver a Home</a>
             <%} else { %>
                 <h1 class="uk-text-center"> <%= resultado[0].usuario.nombre_de_usuario %>'s reviews</h1>
 
@@ -23,13 +24,13 @@
                         <div class="uk-carde-badge uk-label uk-margin-bottom" style="color: white;"> Score: <%= resultado[i].puntaje_sobre_pelicula %></div>
                         <br>
                         <div class="uk-card-body">
-                            <a href="/detallePelicula?id=<%= resultado[i].id_pelicula %>" class="uk-margin-top"> Id Pelicula: <%= resultado[i].id_pelicula %> </a>
+                            <a href="/detallePelicula?id=<%= resultado[i].id_pelicula %>" class="uk-margin-top ups"> Id Pelicula: <%= resultado[i].id_pelicula %> </a>
                             <h4 class="uk-margin-top"> <%= resultado[i].texto_de_reseña %> </h4>
                         </div>
                         <div class="uk-card-footer uk-flex uk-flex-between">
-                            <a class="uk-text-success" href="/usuario/reviews/edit/<%= resultado[i].id%>">Edit</a>
-                            <a class="uk-text-primary" href="/detallePelicula?id=<%= resultado[i].id_pelicula %>">Go to Movie</a>
-                            <a class="uk-text-danger" href="/usuario/reviews/delete/<%= resultado[i].id %>">Delete</a>
+                            <a class="uk-text-success ups" href="/usuario/reviews/edit/<%= resultado[i].id%>">Edit</a>
+                            <a class="uk-text-primary ups" href="/detallePelicula?id=<%= resultado[i].id_pelicula %>">Go to Movie</a>
+                            <a class="uk-text-danger ups" href="/usuario/reviews/delete/<%= resultado[i].id %>">Delete</a>
                         </div>
                     </div>
 
