@@ -37,10 +37,10 @@ module.exports = {
             
               DB.Resenias.create (resenia)
               .then (function (resultado) {
-                  res.send ("Gracias! Tu reseña se creo correctamente")
+                  res.render("gracias")
               })
           } else {
-              res.send ("Hubo un problema! El email o la contraseña no son correctos")
+              res.render("problema")
           }
       })
     },
