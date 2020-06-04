@@ -86,7 +86,7 @@ module.exports = {
         .then(resultado =>{
            //res.send(resultado);
             if(resultado == undefined){
-                res.redirect('/usuario/reviews');
+                res.send("El email o la contraseña son incorrectos, intentalo de nuevo.")
             } else {
                 res.redirect('/usuario/reviews/' + resultado.id)
             }
