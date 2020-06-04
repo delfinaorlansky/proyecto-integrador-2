@@ -64,7 +64,7 @@ module.exports = {
 
     // Crear nuevo Usuario
     creadorUsuario : (req,res) => {
-        moduloLogin.chequearUsuario(req.body.email)
+        moduloLogin.chequearUsuario(req.body.email)  // si el usuario ya existe, que no lo deje crear de vuelta
         .then(function (existeUsuario) {
             if (existeUsuario) {
                 return res.redirect('/usuario/crearusuario?existeUsuario=true');
@@ -157,7 +157,7 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/usuario/reviews')
+                res.redirect("/usuario/reviews/")
             }else{
                 res.render("incorrectoBorrar")
             }
