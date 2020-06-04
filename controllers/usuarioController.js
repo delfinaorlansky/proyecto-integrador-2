@@ -151,7 +151,7 @@ module.exports = {
                 })
                 res.redirect('/usuario/reviews')
             }else{
-                res.redirect('/usuario/reviews/delete/'+ req.params.id)
+                res.render("incorrectoBorrar")
             }
         })
     },
