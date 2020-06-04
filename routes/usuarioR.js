@@ -15,7 +15,9 @@ router.post("/buscador", controller.buscador)
 
 //esto va a --> /usuario/crearUsuario
 router.get("/crearUsuario" , function (req, res) {
-    res.render ("nuevoUsuario")    //me lleva al formulario de registracion
+    res.render ("nuevoUsuario", {
+        existeUsuario: req.query.existeUsuario
+    })    //me lleva al formulario de registracion
 })
 
 // para enviar el form de creador usuario, uso la misma ruta que arriba pero con el metodo POST (el dato no es visible en la url)

@@ -10,6 +10,9 @@
     <title style="text-align: center;"> Registrate!</title>
 </head>
 <h1 style="text-align: center;"> ¡Registrate!</h1>
+<% if (typeof existeUsuario != "undefined") { %>
+    <h2>El usuario ya existe</h2>
+<% } %>
 <body style="text-align: center;">
     <form action="/usuario/crearUsuario" method="POST"> 
 <div>

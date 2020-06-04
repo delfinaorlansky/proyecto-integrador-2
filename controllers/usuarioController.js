@@ -64,15 +64,23 @@ module.exports = {
 
     // Crear nuevo Usuario
     creadorUsuario : (req,res) => {
-     DB.usuario.create ({   // A create le paso un objeto literal con el nombre del campo de la columna. Es asincronico.
-        nombre_de_usuario: req.body.nombre_de_usuario,
-        email: req.body.email,
-        fecha_de_nacimiento: req.body.fecha_de_nacimiento,
-        password: bcrypt.hashSync(req.body.password)
-     })
-     .then (resultado => {
-         res.redirect ("/")  // Una vez registrado, que lo devuelva a la pagina de home.
-     })
+        moduloLogin.chequearUsuario(req.body.email)
+        .then(function (existeUsuario) {
+            if (existeUsuario) {
+                return res.redirect('/usuario/crearusuario?existeUsuario=true');
+            } else {
+                DB.usuario.create ({   // A create le paso un objeto literal con el nombre del campo de la columna. Es asincronico.
+                    nombre_de_usuario: req.body.nombre_de_usuario,
+                    email: req.body.email,
+                    fecha_de_nacimiento: req.body.fecha_de_nacimiento,
+                    password: bcrypt.hashSync(req.body.password)
+                 })
+                 .then (resultado => {
+                    return res.redirect ("/")  // Una vez registrado, que lo devuelva a la pagina de home.
+                 })
+            }
+        })
+     
 
     },
 
