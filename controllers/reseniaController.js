@@ -22,7 +22,7 @@ module.exports = {
         });
     },
 
-
+// Creando Reseñas
     creaResenia: function (req, res) {
       moduloLogin.validar (req.body.email, req.body.password)  //para poder validar
       .then (function (usuario) {

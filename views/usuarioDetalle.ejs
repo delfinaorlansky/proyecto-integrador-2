@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Usuarios </title>
+    <title> Detalle del Usuarios </title>
     
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/detallePelicula.css">
@@ -19,6 +19,7 @@
         <b> Email: </b> <%= elUsuario.email %>
     </p>
      <p>
+         <!-- En el caso de tener reseñas que le aparezcan-->
         <% for( let i = 0; i < elUsuario.resenias.length; i++) { %>
        <b> Reseña: </b> <%= elUsuario.resenias[i].texto_de_reseña %>
     </p>

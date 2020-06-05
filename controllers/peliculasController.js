@@ -44,10 +44,6 @@ proximas: (req,res) =>{
     
 },
 
-
-    
-
-
 login: function(req,res){
     var saludo = "hola"
     res.render('login', {saludo:saludo, pagina:"login"})

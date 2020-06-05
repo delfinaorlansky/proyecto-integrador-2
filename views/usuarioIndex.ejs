@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/detallePelicula.css">
 
-    <title>Usuarios</title>
+    <title>Buscador Usuarios</title>
 </head>
 <body>
   <h1><%= tituloDePagina %></h1>
@@ -19,7 +19,7 @@
       <% for (let i= 0; i < listadoUsuarios.length ; i++) { %>
     <li>
     
-         <a href="/usuario/detalle/<%= listadoUsuarios [i].id %> "> 
+         <a href="/usuario/detalle/<%= listadoUsuarios [i].id %> ">  <!-- Hipervinculo qu elo dirija al detalle del usuario-->
            <%= listadoUsuarios[i].nombre_de_usuario %>  </a>       
     </li>
     <% } %> 
@@ -28,7 +28,7 @@
     <p> No se encontraron usuarios</p>
     <% } %> 
 
-  <button type="submit"> Enviar </button>
+  <button type="submit"> Buscar </button>
 </form>
 </body>
 </html>

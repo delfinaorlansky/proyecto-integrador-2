@@ -126,6 +126,7 @@
 
 
   </div>
+  <!-- En el caso de que la pelicula ya cuente con reseñas: -->
   <% if (reseniaPelicula.length !=0) { %>
     <ul>
       <h2 style="color: turquoise; text-align: center;"> Reseñas de esta pelicula:</h2>
@@ -142,6 +143,7 @@
     <% } else { %>
         <h2 style="text-align: center; color: red;">No hay ninguna reseña de esta pelicula, Agrega la tuya!</h2> 
         <% } %>
+
   <!-- ACA ARRANCA EL FORMULARIO PARA CREAR RESEÑA-->
    <h2 style="text-align: center; color: red;"> DEJANOS TU COMENTARIO SOBRE LA PELICULA!</h2>
    <form style="text-align: center;" action="/resenia/creaResenia" method="POST">
@@ -161,7 +163,7 @@
     <br>
 
     <div>
-      <textarea name="texto_de_reseña" id="texto_de_reseña" cols="30" rows="10" placeholder="Escribi acá" required ></textarea>
+      <textarea name="texto_de_reseña" id="texto_de_reseña" cols="50" rows="10" placeholder="Escribi acá" required ></textarea>
     </div>
      <br>
 

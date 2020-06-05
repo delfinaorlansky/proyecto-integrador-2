@@ -2,7 +2,7 @@ let db = require('./database/models')
 const bcrypt = require('bcryptjs')
 
 let moduloLogin = {
-    chequearUsuario: function (email) {
+    chequearUsuario: function (email) {   //Chequear que exista en la base de datos
         return db.usuario.findOne({
             where: {
                 email: email

@@ -8,6 +8,7 @@
 </head>
 <body >
 
+    <!-- Borrar una de tus reseñas-->
     <% if (tipo == "delete") { %>
     <form  style="text-align: center;" id="formlogin" method="POST" class="uk-background-secondary uk-padding uk-padding-large" action="/usuario/reviews/delete/<%= deleteid %> ">
     <h1 style="color: white;">Borrar Reseña</h1>
@@ -28,6 +29,7 @@
      <button type="submit" name="button">Confirmar</button>
 </form>
 <% } else { %>
+    <!-- Formulario para que se registre y vea sus reseñas-->
     <form id="formlogin" method="POST" class="uk-background-secondary uk-padding uk-padding-large" action="/usuario/reviews">
     <h1 style="text-align: center;"> ¡Registrate para ver tus reseñas!</h1>
     <div class="uk-margin">

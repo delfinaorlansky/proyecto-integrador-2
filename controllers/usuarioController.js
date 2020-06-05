@@ -75,7 +75,7 @@ module.exports = {
                     fecha_de_nacimiento: req.body.fecha_de_nacimiento,
                     password: bcrypt.hashSync(req.body.password)
                  })
-                 .then (resultado => {
+                 .then (resultado => { //Esto va a pasar solo si el usuario no estaba previamente registrado
                     return res.redirect ("/")  // Una vez registrado, que lo devuelva a la pagina de home.
                  })
             }
@@ -94,9 +94,9 @@ module.exports = {
         .then(resultado =>{
            //res.send(resultado);
             if(resultado == undefined){
-                res.render("incorrecto")
+                res.render("incorrecto")  //si los datos ingresados estan mal, lo redirije a la view incorrecto. 
             } else {
-                res.redirect('/usuario/reviews/' + resultado.id)
+                res.redirect('/usuario/reviews/' + resultado.id) //si esta bien lo lleva a la pagina con sus reseñas
             }
         })
     },
@@ -157,9 +157,9 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect("/usuario/reviews/")
+                res.redirect("/usuario/reviews/") //si estan bien los datos, lo devuelve a la pagina de entrar a ver sus reseñas
             }else{
-                res.render("incorrectoBorrar")
+                res.render("incorrectoBorrar")  //si los datos estan mal, lo redirije a la view incorrectoBorrar con la opcion de volver a intentar.
             }
         })
     },

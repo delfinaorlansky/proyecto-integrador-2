@@ -13,7 +13,7 @@ router.get("/detalle/:id" , controller.detalle);
 // esto va a --> /usuario/buscador
 router.post("/buscador", controller.buscador)
 
-//esto va a --> /usuario/crearUsuario
+//esto va a --> /usuario/crearusuario
 router.get("/crearUsuario" , function (req, res) {
     res.render ("nuevoUsuario", {
         existeUsuario: req.query.existeUsuario

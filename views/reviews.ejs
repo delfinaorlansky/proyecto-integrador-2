@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reseñas</title>
+    <title>Mis Reseñas</title>
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
@@ -13,10 +13,12 @@
 
     <div style="text-align: center;" class="uk-container"> 
         <div class="uk-section uk-section-large">
+            <!-- Si no hizo ninguna pelicula, le sale un mensaje avisandole-->
             <% if (resultado.length == 0) { %>
                 <h1>Todavia no hiciste ninguna reseña...</h1>
                 <a style=color:red href="/"> Volver a Home</a>
             <%} else { %>
+            <!-- Si hizo reseñas, le aparecen-->
                 <h1 class="uk-text-center"> Reseñas de <%= resultado[0].usuario.nombre_de_usuario %> </h1>
 
                 <% for(let i=0; i < resultado.length; i++) { %>

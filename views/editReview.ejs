@@ -17,15 +17,15 @@
             <form id="formlogin" method="POST" class="uk-background-secundary uk-padding uk-padding-large" action="/usuario/reviews/edit/<%= resultado.id %>">
                 <div class="uk-margin">
                     <div class="uk-inline uk-width-2-3">
-                        <label for="resenia">Mail:</label>
+                        <label for="resenia">Email:</label>
                         <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                        <input class="uk-input" type="text" id="email" name="email" placeholder="email...">
+                        <input class="uk-input" type="email" id="email" name="email" placeholder="email...">
                     </div>
                 </div>
             <br>
                 <div class="uk-margin">
                     <div class="uk-inline uk-width-2-3">
-                        <label for="resenia">Password:</label>
+                        <label for="resenia">Contraseña:</label>
                         <span class="uk-form-icon" uk-icon="icon: pencil"></span>
                         <input class="uk-input" type="password" id="pass" name="password" placeholder="contraseña...">
                     </div>
@@ -34,7 +34,8 @@
                  <div class="uk-margin">
                      <div class="uk-inline uk-width-2-3">
                          <label for="resenia">Reseña:</label>
-                         <textarea class="uk-textarea" value="" name="resenia" id="" cols="50" rows="3" id="resenia">
+                         
+                         <textarea class="uk-textarea" value="" name="resenia" id="" cols="50" rows="5" id="resenia">
                              <%= resultado.texto_de_reseña %>
                             </textarea>
                      </div>
