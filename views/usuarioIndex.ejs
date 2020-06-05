@@ -10,6 +10,20 @@
     <title>Buscador Usuarios</title>
 </head>
 <body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<div>
+  <a style="color: red;" href="/"> 
+    Volver a la Home  </a>
+</div>
+ 
+  
+  <br>
+  
   <h1><%= tituloDePagina %></h1>
    <form action="/usuario/buscador" method="POST"> 
      <input type="text" name="busqueda" placeholder="Buscar">
@@ -22,14 +36,42 @@
          <a href="/usuario/detalle/<%= listadoUsuarios [i].id %> ">  <!-- Hipervinculo qu elo dirija al detalle del usuario-->
            <%= listadoUsuarios[i].nombre_de_usuario %>  </a>       
     </li>
+    
     <% } %> 
   </ul>
+  <a style="color: red;" href="/usuario"> 
+    Volver al buscador  </a>
   <% } else { %> 
     <p> No se encontraron usuarios</p>
+    <a style="color: red;" href="/usuario"> 
+      Volver al buscador  </a>
     <% } %> 
 
   <button type="submit"> Buscar </button>
 </form>
+<br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+   
+   <footer>
+       <div class="padre-footer">
+       
+         <div class="copyright">
+             <h2 class="nombresDelFooter">Tommy Cohen</h2>
+       
+         </div>
+         <div class="copyright">
+           <h2 class="nombresDelFooter">Victoria Duque</h2>
+         </div>
+         <div class="copyright">
+           <h2 class="nombresDelFooter">Delfina Orlansky</h2>
+         </div>
+       </div>
+       
+           </footer>
 </body>
 </html>
 
