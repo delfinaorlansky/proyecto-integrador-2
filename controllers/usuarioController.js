@@ -157,7 +157,7 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect("/usuario/reviews/")
+                res.redirect('/usuario/reviews/')
             }else{
                 res.render("incorrectoBorrar")
             }
