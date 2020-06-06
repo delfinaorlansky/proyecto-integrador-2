@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes){
+module.exports = function (sequelize, DataTypes){   //esta funcion va a ser la que se exporte. 
     const resenia = sequelize.define (
         'Resenias', 
         {
@@ -10,8 +10,8 @@ module.exports = function (sequelize, DataTypes){
             puntaje_sobre_pelicula : DataTypes.INTEGER, 
         }, 
        {
-        timestamps: false, 
-        tableName: 'reseñas'
+        timestamps: false,  
+        tableName: 'reseñas'  // si no especifico, va a buscar la tabla resenias (y no existe)
        }
     ); 
 
