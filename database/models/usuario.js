@@ -12,8 +12,8 @@ module.exports = function (sequelize, DataTypes){
        }
     ); 
  
-    usuario.associate = function (models) {
-        usuario.hasMany (models.Resenias, {
+    usuario.associate = function (models) {  // associate recibe una función que incluye a todos nuestros modelos del código. Acá dentro definimos las relaciones. 
+        usuario.hasMany (models.Resenias, {  //un usuario TIENE MUCHAS reseñas 
             as: "resenias" , 
             foreignKey: "id_usuario"
         }) ;
