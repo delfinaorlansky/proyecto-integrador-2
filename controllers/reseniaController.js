@@ -1,4 +1,4 @@
-const DB = require ("../database/models");
+const DB = require ("../database/models"); //incluimos la conexion a la base de datos
 const moduloLogin = require ("../modulo-login"); //para poder validar
 
 module.exports = {

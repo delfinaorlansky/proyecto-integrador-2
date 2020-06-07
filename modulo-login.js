@@ -13,7 +13,7 @@ let moduloLogin = {
         })
     },
 
-    buscarPorEmail: function (email){
+    buscarPorEmail: function (email){   //Toma un email como parámetro, busca en la base de datos el usuario que corresponda a ese mail.
         return db.usuario.findOne({
             where: {
                 email:email

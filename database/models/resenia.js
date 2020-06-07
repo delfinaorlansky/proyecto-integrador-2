@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes){
+module.exports = function (sequelize, DataTypes){   //esta funcion va a ser la que se exporte. 
     const resenia = sequelize.define (
         'Resenias', 
         {
@@ -10,13 +10,13 @@ module.exports = function (sequelize, DataTypes){
             puntaje_sobre_pelicula : DataTypes.INTEGER, 
         }, 
        {
-        timestamps: false, 
-        tableName: 'reseñas'
+        timestamps: false,  
+        tableName: 'reseñas'  // si no especifico, va a buscar la tabla resenias (y no existe)
        }
     ); 
 
-    resenia.associate = function (models) {
-        resenia.belongsTo (models.usuario , {
+    resenia.associate = function (models) {  // associate recibe una función que incluye a todos nuestros modelos del código. Acá dentro definimos las relaciones. 
+        resenia.belongsTo (models.usuario , {  // Una reseña PERTENECE a un usuario.
             as: "usuario" ,
             foreignKey: "id_usuario"
         }); 

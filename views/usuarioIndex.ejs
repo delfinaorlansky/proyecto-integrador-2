@@ -12,17 +12,12 @@
 <body>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
 
 <div>
   <a style="color: red;" href="/"> 
     Volver a la Home  </a>
 </div>
  
-  
-  <br>
   
   <h1><%= tituloDePagina %></h1>
    <form action="/usuario/buscador" method="POST"> 
@@ -39,12 +34,10 @@
     
     <% } %> 
   </ul>
-  <a style="color: red;" href="/usuario"> 
-    Volver al buscador  </a>
+  
   <% } else { %> 
     <p> No se encontraron usuarios</p>
-    <a style="color: red;" href="/usuario"> 
-      Volver al buscador  </a>
+ 
     <% } %> 
 
   <button type="submit"> Buscar </button>
