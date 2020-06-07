@@ -21,7 +21,7 @@ detallePelicula: (req, res) => {
         return res.render('detallePelicula', {
             reseniaPelicula: resenias,
             idPelicula: req.query.id
-        });
+        }); // este metodo trae abajo de cada detalle de pelicula todas las resenias realizadas sobre esa pelicula
     }) 
     .catch(error => {
         res.send (error)
@@ -50,35 +50,7 @@ login: function(req,res){
     
 },
 
-comparacion: function(req,res){
-    moduloLogin.chequearUsuario(req.body.email)
-    .then(resultado =>{
-        if (resultado == false){
-            console.log("El email ingresado no se encuentra en la base de datos");
 
-        }
-        else{
-            console.log("el email ingresado esta en la base de datos");
-
-            moduloLogin.buscarPorEmail(req.body.email)
-            .then(usuario =>{
-                console.log(req.body.password);
-                console.log(usuario.userPass);
-                console.log(bcrypt.compareSync(req.body.password, usuario.userPass));
-
-                if (bycrypt.compareSync(req.body.password, usuario.userPass)){
-                    var nombre = usuario.nombre_de_usuario
-                    var idUsuario = usuario.id_usuario
-
-                    res.send( nombre + 'Te logueaste, con id:' + idUsuario)
-                }
-                else{
-                    res.send('Datos Invalidos')
-                }
-            })
-        }
-    })
-}
 
 }
 

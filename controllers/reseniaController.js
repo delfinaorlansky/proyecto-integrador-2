@@ -37,10 +37,10 @@ module.exports = {
             
               DB.Resenias.create (resenia)
               .then (function (resultado) {
-                  res.render("gracias")
+                  res.render("gracias") // en caso de estar bien todos los datos del usuario crea la resenia y te envia a la vista "gracias"
               })
           } else {
-              res.render("problema")
+              res.render("problema") // en caso de que los datos sean erroneos te enviara a la vista "problema"
           }
       })
     },
